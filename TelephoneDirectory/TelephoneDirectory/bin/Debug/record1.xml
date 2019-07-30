@@ -1,0 +1,1 @@
+﻿<List x:TypeArguments="t:TDirectory" Capacity="0" xmlns="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:t="clr-namespace:TelephoneDirectory;assembly=TelephoneDirectory" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />

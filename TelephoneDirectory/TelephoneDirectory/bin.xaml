@@ -1,0 +1,5 @@
+﻿<List x:TypeArguments="t:TDirectory" Capacity="4" xmlns="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:t="clr-namespace:TelephoneDirectory;assembly=TelephoneDirectory" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <t:TDirectory fullName=" Shir Nassim" phoneNum="0587261851" />
+  <t:TDirectory fullName=" Ortal Cohen" phoneNum="0527610976" />
+  <t:TDirectory fullName=" Yohanan Nassim" phoneNum="0583226393" />
+</List>

@@ -1,0 +1,41 @@
+﻿<Window x:Class="TelephoneDirectory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TelephoneDirectory"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Label x:Name="label" Content="Phone Directory" HorizontalAlignment="Left" Height="62" Margin="153,2,0,0"  VerticalAlignment="Top" Width="253" FontSize="30" />
+        <ListView x:Name="lvDataBinding" HorizontalAlignment="Left" Height="246" Margin="265,64,0,0" VerticalAlignment="Top" Width="224" MouseDoubleClick="onSelectedContact">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=fullName}" 
+                                Header="Name" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding= "{Binding Path=phoneNum}" 
+                                Header="Phone Number" Width="100"/>
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+
+        <Button x:Name="addBtn" Content="New Contact" HorizontalAlignment="Left" Margin="145,163,0,0" VerticalAlignment="Top" Width="82" Height="28" Click="addNewContactClick"/>
+        <Button x:Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="60,268,0,0" VerticalAlignment="Top" Width="99" Height="28" Click="saveBtn_Click"/>
+       
+        <TextBlock Margin="34,168,369,120"
+                Text="enter name"
+                Foreground="Gray"
+                Name="txtHintName"/>
+      
+        <TextBox Name="txtName"
+                Background="Transparent"
+                TextChanged="txtName_NameChanged" Margin="24,165,381,123"/>
+        
+      <!--  <TextBox x:Name="searchName" HorizontalAlignment="Left" Height="23" Margin="21,167,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="120"/>-->
+
+        <CheckBox x:Name="orderByNameCB" Content="Order By Name" HorizontalAlignment="Left" Margin="24,122,0,0" VerticalAlignment="Top" Checked="orderByNameCB1" Unchecked="NotorderByNameCB1"/>
+        <Button x:Name="loadBtn" Content="Upload Existing List" HorizontalAlignment="Left" Height="28" Margin="24,202,0,0" VerticalAlignment="Top" Width="203" Click="loadBtn_Click"/>
+
+    </Grid>
+</Window>

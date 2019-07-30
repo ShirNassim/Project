@@ -1,0 +1,39 @@
+﻿<Window x:Class="TelephoneDirectory.AddNewContact"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TelephoneDirectory"
+        mc:Ignorable="d"
+        Title="AddNewContact" Height="300" Width="300">
+    <Grid>
+        <TextBlock Margin="99,93,80,146"
+                Text="Name"
+                Foreground="Gray"
+                Name="txtHintName1"/>
+
+        <TextBox Name="txtName1"
+                Background="Transparent"
+                TextChanged="txtName_NameChanged1" Margin="90,87,93,146"/>
+        <Label x:Name="label" Content="Create New Contact" HorizontalAlignment="Left" Height="28" Margin="90,42,0,0" VerticalAlignment="Top" Width="128"/>
+
+        <TextBlock Margin="99,152,78,87"
+                Text="Phone Number"
+                Foreground="Gray"
+                Name="txtHintphone"/>
+
+        <TextBox Name="txtphone"
+                Background="Transparent"
+                TextChanged="txtphone_phoneChanged1" Margin="90,146,93,87"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="215" Margin="25,33,0,0" VerticalAlignment="Top" Width="244"/>
+        <Button x:Name="Addbtn" Content="Save" HorizontalAlignment="Left" Height="25" Margin="84,202,0,0" VerticalAlignment="Top" Width="64" Click="saveBtnClick" RenderTransformOrigin="0.482,0.962"/>
+        <Button Margin="41,199,213,30" Click="back1_btnClick">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="c:\users\user\documents\visual studio 2015\Projects\TelephoneDirectory\TelephoneDirectory\pic\Back_Arrow.svg.png" Cursor="Hand" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
+</Window>
